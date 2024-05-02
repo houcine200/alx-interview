@@ -25,9 +25,11 @@ try:
         line_count += 1
         split_line = line.split()
 
-        if len(split_line) > 4:
+        if len(split_line) > 2:
             file_size += int(split_line[-1])
             status_code = split_line[-2]
+        else:
+            status_code = 0
 
         if status_code in status_codes.keys():
             status_codes[status_code] += 1
