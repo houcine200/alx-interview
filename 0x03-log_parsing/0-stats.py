@@ -27,7 +27,7 @@ try:
 
         if len(split_line) > 4:
             file_size += int(split_line[-1])
-            status_code = int(split_line[-2])
+            status_code = split_line[-2]
         else:
             status_code = 0
 
