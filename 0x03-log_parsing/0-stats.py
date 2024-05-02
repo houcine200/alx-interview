@@ -43,4 +43,3 @@ try:
 
 except (KeyboardInterrupt):
     printstats(file_size, status_codes)
-    raise
