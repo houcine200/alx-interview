@@ -34,7 +34,7 @@ try:
         if status_code in status_codes.keys():
             status_codes[status_code] += 1
 
-        if line_count == 10:
+        if line_count % 10 == 0:
             printstats(file_size, status_codes)
 
     printstats(file_size, status_codes)
