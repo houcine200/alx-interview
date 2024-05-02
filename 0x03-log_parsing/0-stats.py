@@ -18,4 +18,5 @@ for line in stdin:
 
     print("File size:", file_size)
     for code, count in sorted(status_codes.items()):
-        print(f"{code}: {count}")
+        print (type(f"{code}: {count}"))
+
