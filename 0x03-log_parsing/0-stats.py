@@ -29,7 +29,7 @@ try:
             file_size += int(split_line[-1])
 
         if len(split_line) >= 8 and split_line[-2].isnumeric():
-            status_code = split_line[-2]
+            status_code = int(split_line[-2])
         else:
             status_code = 0
 
