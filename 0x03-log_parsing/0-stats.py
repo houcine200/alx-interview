@@ -33,7 +33,6 @@ try:
             status_codes[status_code] += 1
 
         if line_count % 10 == 0:
-            status_code = 0
             printstats(file_size, status_codes)
 
     printstats(file_size, status_codes)
