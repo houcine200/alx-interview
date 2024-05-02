@@ -15,7 +15,6 @@ for line in stdin:
     if status_code in status_codes:
         status_codes[status_code] += 1
 
-    if line_count == 10:
-        print("File size:", file_size)
-        for code, count in sorted(status_codes.items()):
-            print(f"{code}: {count}")
+    print("File size:", file_size)
+    for code, count in sorted(status_codes.items()):
+        print(f"{code}: {count}")
