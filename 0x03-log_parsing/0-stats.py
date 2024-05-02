@@ -10,7 +10,7 @@ def printstats(file_size, status_codes):
     """
     print(f"File size: {file_size}")
     for code, count in sorted(status_codes.items()):
-        if status_codes[code] > 0:
+        if count > 0:
             print(f"{code}: {count}")
 
 
