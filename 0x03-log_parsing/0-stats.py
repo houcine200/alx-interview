@@ -8,10 +8,10 @@ def printstats(file_size, status_codes):
     This prints statistics at the beginning and every 10 lines
     This will also be called on a Keyboard interruption
     """
-    print(f"File size: {file_size}")
-    for code, count in sorted(status_codes.items()):
-        if count > 0:
-            print(f"{code}: {count}")
+    print("File size: " + str(file_size))
+    for code in sorted(status_codes.keys()):
+        if status_codes[code] > 0:
+            print(code + ": " + str(status_codes[code]))
 
 
 line_count = 0
@@ -36,7 +36,7 @@ try:
         if status_code in status_codes.keys():
             status_codes[status_code] += 1
 
-        if line_count == 10:
+        if line_count % 10 == 0:
             printstats(file_size, status_codes)
 
     printstats(file_size, status_codes)
