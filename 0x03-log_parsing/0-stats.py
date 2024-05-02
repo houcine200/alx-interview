@@ -25,11 +25,11 @@ try:
         line_count += 1
         split_line = line.split()
 
-        if len(split_line) >= 9:
+        if len(split_line) > 1:
             file_size += int(split_line[-1])
 
-        if len(split_line) >= 8 and split_line[-2].isnumeric():
-            status_code = int(split_line[-2])
+        if len(split_line) > 2 and split_line[-2].isnumeric():
+            status_code = split_line[-2]
         else:
             status_code = 0
 
