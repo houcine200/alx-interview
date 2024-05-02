@@ -20,4 +20,3 @@ for line in stdin:
     for code, count in sorted(status_codes.items()):
         if count > 0:
             print(f"{code}: {count}")
-        
