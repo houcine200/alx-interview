@@ -13,7 +13,7 @@ def rotate_2d_matrix(matrix):
     # Step 1: Transpose the matrix
     # swapping element at (i, j) with element at (j, i)
     for i in range(n):
-        for j in range(i ,n):
+        for j in range(i, n):
             temp = matrix[i][j]
             matrix[i][j] = matrix[j][i]
             matrix[j][i] = temp
